@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+<context:annotation-config/>
+<bean id="stud1" class="DemoOnSpring.DemoOnSpring.Student"> 
+<constructor-arg value="1" type="int"></constructor-arg>
+<constructor-arg value="Venkat" type="String"></constructor-arg>    
+</bean>
+<bean id="stud2" class="DemoOnSpring.DemoOnSpring.Student"> 
+<constructor-arg value="2" type="int"></constructor-arg>
+<constructor-arg value="Grkrao" type="String"></constructor-arg>    
+</bean>
+<bean id="coll1" class="DemoOnSpring.DemoOnSpring.Collage">
+<property name="cname" value="KLU"></property>
+<property name="stud" ref="stud1"></property>
+</bean>
+  <bean id="ins" class="DemoOnSpring.DemoOnSpring.Instructor">
+        <constructor-arg value="1" type="int"/>
+        <constructor-arg value="ram" type="String"/>
+        <constructor-arg value="ram@example.com" type="String"/>
+        <constructor-arg value="1234567890" type="Long"/>
+    </bean>
+    <bean id="course1" class="DemoOnSpring.DemoOnSpring.Courese">
+        <constructor-arg value="101"/>
+        <constructor-arg value="Java Programming"/>
+        <constructor-arg value="4"/>
+    </bean>
+</beans>
